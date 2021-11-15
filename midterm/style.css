@@ -4,7 +4,7 @@ html {
 
  }
 body {
-    margin-left: -0.6%;
+    margin-left: -0.1%;
 }
 @font-face {
   font-family: cute;
@@ -41,6 +41,7 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #3f4238;
+  color: white;
 }
 
 .active {
@@ -100,24 +101,44 @@ p {
   grid-template-columns: auto auto auto auto;
   margin-bottom: 10%;
 }
-#res-container {
-  width: 90%;
-  margin-left: 0%;
-}
+
 .resources-type-containers {
+  width: 90%;
   display: grid;
-  grid-column-gap: 0vw;
-  grid-row-gap: 1vh;
-  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 1.5vw;
+  grid-row-gap: 0vh;
+  grid-template-columns: auto auto auto;
   margin-bottom: 10%;
 }
 .res-blob {
   background-color: #9c7968;
-  width: 15vw;
-  margin-left: 30%;
+  width: 23vw;
+  margin-left: 20%;
   border-radius: 40px;
   padding: 2.5vw;
   margin-top: 3%;
+}
+
+.tomato-blob {
+  background-color: #d13a26;
+  border-radius: 40px;
+  padding: 4vw;
+  width: 70%;
+  margin-left: 12%;
+
+}
+.tomato-container {
+  width: 90%;
+  display: grid;
+  grid-column-gap: 2vw;
+  grid-row-gap: 0vh;
+  grid-template-columns: auto auto;
+  margin-bottom: 10%;
+  margin-top:10%;
+}
+.tomato-item {
+  width: 23vw;
+
 }
 .music-thumbnail {
   width: 90%;
@@ -130,4 +151,28 @@ p {
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
+}
+#tomato-steps {
+
+}
+#tomato-steps > ol {
+  color:#d13a26;
+  font-family: cute;
+  font-size: 3vw;
+
+
+
+}
+#tomato-steps > ol > li {
+  width: 100%;
+}
+#next-container {
+  width: 100%;
+  display: grid;
+  grid-column-gap: 10vw;
+  grid-row-gap: 0vh;
+  grid-template-columns: auto auto;
+  margin-bottom: 10%;
+  margin-top:10%;
+  margin-left: 80%;
 }
