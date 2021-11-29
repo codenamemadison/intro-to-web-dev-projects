@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Week 12 Assignment</title>
+  <script type="module">
+  import * as THREE from 'https://threejs.org/build/three.module.js';
+
+  function main() {
+    const canvas = document.querySelector('#c');
+    // renderer takes all data provided and renders it to canvas
+    const renderer = new THREE.WebGLRenderer({canvas});
+
+    const fov = 75; // field of view
+    const aspect = 2;  // display aspect = the canvas default
+    const near = 0.1; // closer bound of what will be shown
+    const far = 5; // farther bound of what will be shown
+    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+    camera.position.z = 2;
+
+    // anything we want to draw goes to scene
+    const scene = new THREE.Scene();
+
+    // creating a light - has position and target - shining toward box
+    {
+      const color = 0xFFFFFF;
+      const intensity = 1;
+      const light = new THREE.DirectionalLight(color, intensity);
+      light.position.set(-1, 2, 4);
+      scene.add(light);
+    }
+
+    // BoxGeometry will contain data for a box we are trying to make (determines
+    // shapes of object)
+    const boxWidth = 1;
+    const boxHeight = 1;
+    const boxDepth = 1;
+    const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+
+    function makeInstance(geometry, color, x) {
+      // material determines how we draw object
+      const material = new THREE.MeshPhongMaterial({color});
+      // we create a mesh object (made of geometry, material, and positioning/orientation stats)
+      const cube = new THREE.Mesh(geometry, material);
+      scene.add(cube);
+
+      cube.position.x = x;
+
+      return cube;
+    }
+    const cubes = [
+      makeInstance(geometry, 0x44aa88,  0),
+      makeInstance(geometry, 0x8844aa, -1.8),
+      makeInstance(geometry, 0xaa8844,  1.8),
+    ];
+    // animate box moving
+    function render(time) {
+      time *= 0.001;   // convert time page loaded to render to seconds
+
+      cubes.forEach((cube, ndx) => {
+        const speed = 1 + ndx * .1;
+        const rot = time * speed;
+        cube.rotation.x = rot;
+        cube.rotation.y = rot;
+      });
+      // render mesh objects to scene
+      renderer.render(scene, camera);
+      // request to browser that we want to use given function
+      requestAnimationFrame(render);
+    }
+    requestAnimationFrame(render);
+
+
+
+  }
+  main();
+
+  </script>
+</head>
+<body>
+  hi
+  <canvas id="c"></canvas>
+</body>
+</html>

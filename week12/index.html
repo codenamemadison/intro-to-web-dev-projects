@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Week 12 Assignment</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module">
+  import * as THREE from 'https://threejs.org/build/three.module.js';
+
+  function main() {
+    const canvas = document.querySelector('#canvas');
+    // renderer takes all data provided and renders it to canvas
+    const renderer = new THREE.WebGLRenderer({canvas});
+
+    const fov = 75; // field of view
+    const aspect = 2;  // display aspect = the canvas default
+    const near = 0.1; // closer bound of what will be shown
+    const far = 10; // farther bound of what will be shown
+    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+    camera.position.z = 4;
+
+    // anything we want to draw goes to scene
+    const scene = new THREE.Scene();
+
+    // creating a light - has position and target - shining toward box
+    {
+      const color = 0xFFFFFF;
+      const intensity = 1.1;
+      const light = new THREE.DirectionalLight(color, intensity);
+      light.position.set(-1, 2, 6);
+      scene.add(light);
+    }
+
+    // BoxGeometry will contain data for a box we are trying to make (determines
+    // shapes of object)
+    const boxWidth = 0.9;
+    const boxHeight = 0.9;
+    const boxDepth = 0.9;
+    const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+
+    function makeInstance(geometry, color, x, y) {
+      // material determines how we draw object
+      const material = new THREE.MeshPhongMaterial({color});
+      // we create a mesh object (made of geometry, material, and positioning/orientation stats)
+      const cube = new THREE.Mesh(geometry, material);
+      scene.add(cube);
+
+      cube.position.x = x;
+      cube.position.y = y;
+
+      return cube;
+    }
+    const cubes = [
+
+      makeInstance(geometry, 0xeb0e1d,  -4.2, 1.2), // red
+      makeInstance(geometry, 0x3870ff,  -3.0, -2.0), // blue
+      makeInstance(geometry, 0xffe600,  -2.0, 0.6), // yellow
+      makeInstance(geometry, 0x44aa88,  -1.0, -1.0), // teal
+      makeInstance(geometry, 0x8844aa, 0, 2.0), // purple
+      makeInstance(geometry, 0x00c213,  1.6, 0), // green
+      makeInstance(geometry, 0x963c00,  3.8, 0.5),
+      makeInstance(geometry, 0xaa8844,  2.5, -2.0),
+    ];
+    // animate box moving
+    function render(time) {
+      time *= 0.001;   // convert time page loaded to render to seconds
+
+      cubes.forEach((cube, ndx) => {
+        const speed = 1 + ndx * .1;
+        const rot = time * speed;
+        cube.rotation.x = rot;
+        cube.rotation.y = rot;
+      });
+      // render mesh objects to scene
+      renderer.render(scene, camera);
+      // request to browser that we want to use given function
+      requestAnimationFrame(render);
+    }
+    requestAnimationFrame(render);
+  }
+  main();
+
+
+  </script>
+</head>
+<body>
+  <div id="canvas-container">
+  <canvas id="canvas" width="1000vw" height="500vw" ></canvas>
+  <h1 id="canvas-header"> Introducing three.js </h1>
+  </div>
+  <div class="text-container">
+    <h1> What is three.js? </h1> <!--https://threejs.org/-->
+    <p> three.js is a Javascript library used for creating and animating 3D graphics
+  in a web browser using WebGL. With three.js you can animate objects in lifelike scenes</p>
+  </div>
+  <div class="text-container">
+    <h1> How does three.js work? </h1>
+    <p> </p>
+    <h2>Renderer</h2>
+    <ul>
+      <li>Renderer is the main object of three.js.</li>
+      <li>The object that renders (draws) the 3D scene you set up</li>
+    </ul>
+    <h2> Basic Structure - Scenegraph </h2>
+      <img src="images/threejs-structure.svg">
+      <p> Consists of various objects - Scene object, multiple Mesh objects,
+      Light objects, Group, Object#D, and Camera Objects </p>
+    <h2>Scene</h2>
+    <ul>
+      <li>Defines root of scenegraph</li>
+      <li>Contains its own visual properties</li>
+      <li>Consists of the hierarchy objects are under that dictate position and
+      orientation of objects relative to other objects</li>
+    </ul>
+    <h2>Mesh</h2>
+    <ul>
+      <li>Draws the specific "Geometry" of an object with a specific "Material"
+      with a specific position and orientation on the x, y, and z-axis</li>
+      <li>Geometry - dictates vertex data for object (i.e. height, width, depth, etc.)</li>
+      <li>Material - dictates surface properties of object (ex. color and shininess)</li>
+      <li>Multiple objects can refer to the same Geometry object and the same Material
+      object</li>
+    </ul>
+    <h2>Light</h2>
+    <ul>
+      <li>An object that can "shine light" toward other objects</li>
+      <li>Has properties that can be changed such as the color, intensity, and thead
+      position the light is pointing from and at.</li>
+    </ul>
+    <h2>Camera</h2>
+    <ul>
+      <li>The object that "views" the scene showing</li>
+      <li>Able to choose position of camera on x, y, z-axis</li>
+      <img src="images/threejs-scene-layout.svg" style="width:50%; margin-left: 25%;">
+      <li>Must dictate otherproperties such as field of view, aspect, and near and far</li>
+      <li>These properties define a "frustum" (a 3D shape similar to a pyramid without the tip)</li>
+      <img src="images/threejs-frustum-diagram.svg" style="width:50%; margin-left: 25%;">
+    </ul>
+
+
+
+  </div>
+  <div class="text-container">
+    <h1> Example </h1>
+    <img src="images/threejs-multiple-cubes.svg">
+    <a href="https://threejs.org/manual/examples/fundamentals-with-light.html" target="_blank"> <p> Example Animation of Single Cube</p> </a>
+  </div>
+
+</body>
+</html>
