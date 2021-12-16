@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Final Project </title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <script src="function.js"></script>
+        <script src="jquery-2.1.4.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="three.min.js"> </script>
+  <script>
+  </script>
+  <style>
+  section {
+    margin: -1%;
+  }
+  .class {
+
+  }
+  #welcome {
+    height: 103vh;
+    background-color: #fa7921;
+    margin-top: -0.6%;
+    box-sizing: border-box;
+  }
+
+  #about {
+    height: 160vh;
+    background-color: #ff9920;
+  }
+
+  #tech {
+    height: 105vh;
+    background-color: #0c4767;
+    position: relative;
+  }
+  body {
+
+  }
+  .typing-container {
+
+  }
+  h1 {
+    font-size: 6vw;
+    color: white;
+    font-family: standard;
+    margin-top: 0%;
+  }
+
+  p {
+    font-family: standard;
+  }
+  .input-cursor {
+     height: 80px;
+     background-color: white;
+     margin-top:-5%;
+   }
+   .pushable {
+  background: #a63e16;
+  border-radius: 30px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  margin-left: 42%;
+  margin-top: -10%;
+  width: 15%;
+  }
+  .front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 30px;
+  font-size: 1.25rem;
+  background: #ff4800;
+  color: white;
+  transform: translateY(-6px);
+  }
+
+  .pushable:active .front {
+  transform: translateY(-2px);
+  }
+
+  #about-text-container {
+    margin-top: -10%;
+    width: 90%;
+    margin-left: 10%;
+    padding: 5%;
+  }
+
+  #about-1 {
+    width: 45%;
+    margin-left: 18%;
+  }
+  #about-2 {
+    width: 35%;
+    margin-top: 5%;
+    margin-left: -5%;
+  }
+  #about-3 {
+    width: 30%;
+    margin-top: 5%;
+    margin-left: 50%;
+  }
+  #about-4 {
+    width: 35%;
+    margin-top: 5%;
+    margin-left: 40%;
+  }
+  #tech-1 {
+    font-size: 3vw;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 18%;
+  }
+  #tech-2 {
+    font-size: 3vw;
+    color: white;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+  }
+  #tech-3 {
+    font-size: 3vw;
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+  }
+  #tech-4 {
+    font-size: 3vw;
+    color: white;
+    position: absolute;
+    top: 3%;
+    left: 60%;
+  }
+  #tech-5 {
+    font-size: 3vw;
+    color: white;
+    position: absolute;
+    top: 65%;
+    left: 20%;
+  }
+  #tech-6 {
+    font-size: 3vw;
+    color: white;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+  }
+  </style>
+
+
+</head>
+<body onload="init()">
+<section id="welcome">
+  <div class="topnav">
+    <a class="active" href="#welcome">Home</a>
+    <a href="#about">About</a>
+    <a href="#tech">Technology Used</a>
+  </div>
+
+  <div class="typing-container" style="margin-top: 19%;">
+    <h1 id="welcome_title" ></h1>
+    <span class="input-cursor"></span>
+  </div>
+  <button class="pushable"> <!-- tutorial used: https://www.joshwcomeau.com/animation/3d-button/ -->
+    <span class="front">
+      Enter
+    </span>
+  </button>
+</section>
+<section id="about">
+  <div class="topnav">
+    <a href="#welcome">Home</a>
+    <a class="active" href="#about">About</a>
+    <a href="#tech">Technology Used</a>
+  </div>
+  <div class="typing-container" style="margin-top: 17%;">
+    <h1 id="about_title" ></h1>
+    <span class="input-cursor"></span>
+  </div>
+  <div class="text-container" id="about-text-container">
+    <p id="about-1">
+      As my final project for my Intro to Web Development class and during a
+      time where I begin to prepare for my journey after college, I wanted
+      to make a website that was an "ode to my youth" in some way. This
+      website serves as a "time capsule" of memoriabilia I've collected
+      over the years during college or objects that have had meaning to me
+      during my time at college.
+    </p>
+    <p id="about-2">
+      As you venture further into this website, the
+      viewer can learn about all the
+      memories, stories, and details behind each item, with many elements
+      they can interact with to feel more immersed in the experience I've had
+      with the object that I am trying to recreate. In this way, I am
+      "preserving" my youth before I graduate for college and letting the viewer
+      learn more about me in this way.
+    </p>
+    <p id="about-3">
+      The bigger concept was to explore the ways web dev and web design as a
+      means for others to be able to easily be able to connect and understand
+      intimate moments and memories of our own lives.
+    </p>
+    <p id="about-4">
+      In this way, I hope viewers can experience my own experiences as their own
+      as close as possible.
+    </p>
+  </div>
+</section>
+<section id="tech">
+  <div class="topnav">
+    <a href="#welcome">Home</a>
+    <a href="#about">About</a>
+    <a class="active" href="#tech">Technology Used</a>
+  </div>
+  <div class="typing-container" style="margin-top: 20%;">
+    <h1 id="tech_title" ></h1>
+    <span class="input-cursor"></span>
+  </div>
+  <p id="tech-1">
+    HTML
+  </p>
+  <p id="tech-2">
+    CSS
+  </p>
+  <p id="tech-3">
+    Javascript
+  </p>
+  <p id="tech-4">
+    GitHub
+  </p>
+  <p id="tech-5">
+    w3School
+  </p>
+  <p id="tech-6">
+    Other online resources
+  </p>
+</section>
+</body>
+
+</html>
