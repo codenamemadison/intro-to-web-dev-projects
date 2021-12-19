@@ -116,12 +116,40 @@
   <p style="font-family: standard; font-size: 3vh;text-align: center;"> Sims 4....but for your couch? Pick an activity </p>
   <div style="position: relative;">
   <img src="images/couch_ex.png" style="width: 50%;margin-left: 25%;margin-top: 10%;">
-  <div class="option" style="left: 10%; bottom: 50%;width: 5%;"> Sleep </div>
-  <div class="option" style="left: 17%; bottom: 70%;width: 24%;"> Study for your next Computer Science exam </div>
-  <div class="option" style="left: 43%; bottom: 84%;width: 16%;"> Sit and scroll on TikTok </div>
-  <div class="option" style="left: 60%; bottom: 70%;width: 16%;"> Order Gruhub and eat dinner </div>
-  <div class="option" style="left: 75%; bottom: 40%;width: 20%;"> Continue watching that anime show you were watching with friends </div>
+  <div class="option" style="left: 10%; bottom: 50%;width: 5%;" onclick="sleep()"> Sleep </div>
+  <div class="option" style="left: 17%; bottom: 70%;width: 24%;" onclick="study()"> Study for your next Computer Science exam </div>
+  <div class="option" style="left: 43%; bottom: 84%;width: 16%;" onclick="tiktok()"> Sit and scroll on TikTok </div>
+  <div class="option" style="left: 60%; bottom: 70%;width: 16%;" onclick="eat()"> Order Gruhub and eat dinner </div>
+  <div class="option" style="left: 75%; bottom: 40%;width: 20%;" onclick="anime()"> Continue watching that anime show you were watching with friends </div>
+
+  <audio id="sleep" src="content/sleep.mp3"></audio>
+  <audio id="study" src="content/study.mp3"></audio>
+  <audio id="tiktok" src="content/tiktok.mp3"></audio>
+  <audio id="eat" src="content/eat.mp3"></audio>
+  <audio id="anime" src="content/anime.mp3"></audio>
 </div>
+<script>
+function sleep() {
+        var audio = document.getElementById("sleep");
+        audio.play();
+}
+function study() {
+        var audio = document.getElementById("study");
+        audio.play();
+}
+function tiktok()) {
+        var audio = document.getElementById("tiktok");
+        audio.play();
+}
+function eat() {
+        var audio = document.getElementById("eat");
+        audio.play();
+}
+function anime() {
+        var audio = document.getElementById("anime");
+        audio.play();
+}
+</script>
 </section>
 </body>
 </html>
