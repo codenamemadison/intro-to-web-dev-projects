@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> </title>
+  <script src="function.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+  body {
+    background-color: #b9a44c;
+  }
+  #chest-closed {
+    width: 30%;
+    margin-top:12%;
+    margin-left: 35%;
+  }
+ #caption {
+  font-family: standard;
+  text-align: center;
+}
+
+
+  </style>
+</head>
+<body>
+  <div id="house">
+    <img src="images/house.png" alt = "house-image" id="house-image">
+    <a href="index.html"><h1 id="go-back"> Go back </h1></a>
+  </div>
+  <img src="images/chest_closed.png" alt = "chest-image" id="chest-closed" usemap = "#chest">
+      <map name = "chest">
+         <area shape = "circle" coords = "162,150,30" alt = "lock"
+            href = "possessions.html" />
+      </map>
+  <h1 id="caption"> Open the chest to continue<br>(you may need to click
+    somewhere specific on the chest...)</h1>
+</body>
+</html>

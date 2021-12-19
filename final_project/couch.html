@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> </title>
+  <script src="function.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+  body {
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+  }
+  h2 {
+    font-family: cute;
+    font-size: 4.5vh;
+  }
+  p {
+    font-family: standard;
+    font-size: 3vh;
+    text-align: left;
+  }
+  #welcome {
+    height: 100vh;
+    background-color: #fafafa;
+  }
+  #item-desc {
+    height: 100vh;
+    background-color: #ced4da;
+
+  }
+  #item-story {
+    height: 100vh;
+    background-color: #adb5bd;
+  }
+  #item-experience {
+    height: 100vh;
+    background-color: #6c757d;
+  }
+  #house-image {
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+  #welcome-title {
+    margin-left: 38%;
+  }
+  #main-image {
+    width: 40%;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+  }
+  .option{
+    height 5vh;
+    width: 10vw;
+    background-color: white;
+    border-radius: 30px;
+    font-family: standard;
+    color: #005499;
+    position: absolute;
+    padding: 0.75%;
+    text-align: center;
+  }
+  .option:hover {
+    color:#0fb309;
+
+  }
+  </style>
+</head>
+<body>
+  <div id="house">
+    <img src="images/house.png" alt = "house-image" id="house-image">
+    <a href="possessions.html"><h1 id="go-back"> Go back </h1></a>
+  </div>
+<section id="welcome">
+  <img id="main-image" src="images/couch_drawing.png">
+  <h1 id="welcome-title"> Long's Couch </h1>
+  <a href="#item-desc"><img src="images/arrow_down.png" id="down-arrow-image"> </a>
+</section>
+<section id="item-desc">
+  <h1 class="section-title"> The Item </h1>
+  <div style="display: flex; justify-content: space-evenly; margin-top: 2%;">
+    <img src="images/couch_1.png" style="width: auto; height: 40vh; margin-left: 1%;margin-top: 5%;">
+    <div class="text-box" style="background-color:#adc3d9;margin-left: 1%;">
+      <h2> Item Description: </h2> My friend's gray couch <br>
+      <h2> Location & Means of Recival: </h2> My friend's apartment in Brooklyn <br>
+      <h2> Special Details: </h2> Ideal nap location <br>
+      <h2> Time Period of Impact: </h2> Fall 2020 - Spring 2021 <br>
+    </div>
+  </div>
+</section>
+<section id="item-story">
+  <h1 class="section-title"> The Story </h1>
+  <div style="display: flex; justify-content: space-evenly;">
+  <img src="images/couch_hangout_1.jpg" style="width: auto; height: 60vh; margin-left: 1%;margin-top: 1%;">
+  <div class="text-box" id="story-text-box" style="">
+    <p>
+      During quarantine, our friend Long's apartment was the go-to place for
+      me and a few other friends to go to. Whether it was to study together
+      because we were taking the same classes, talk for hours and hours about our lives,
+      get food and coming back to eat, accidentally fall asleep, or be the default
+      place to go to after recitation, the apartment was our hangout spot for
+      spending time together during a time where we couldn't really go out.
+      Although this object compared to the others is not one that I own myself,
+      it is associated a lot with these memories since its where they all took place.
+      Serving as the only place to sit as a guest, the couch has accidentally made
+      its place in our hang-out environment at the time.
+<br><br>
+      On the left, for example, it was where we sat and hang out during our
+      "Galentine's celebration".
+  </p>
+  </div>
+</div>
+</section>
+<section id="item-experience">
+  <h1 class="section-title"> The Experience </h1>
+  <p style="font-family: standard; font-size: 3vh;text-align: center;"> Sims 4....but for your couch? Pick an activity </p>
+  <div style="position: relative;">
+  <img src="images/couch_ex.png" style="width: 50%;margin-left: 25%;margin-top: 10%;">
+  <div class="option" style="left: 10%; bottom: 50%;width: 5%;"> Sleep </div>
+  <div class="option" style="left: 17%; bottom: 70%;width: 24%;"> Study for your next Computer Science exam </div>
+  <div class="option" style="left: 43%; bottom: 84%;width: 16%;"> Sit and scroll on TikTok </div>
+  <div class="option" style="left: 60%; bottom: 70%;width: 16%;"> Order Gruhub and eat dinner </div>
+  <div class="option" style="left: 75%; bottom: 40%;width: 20%;"> Continue watching that anime show you were watching with friends </div>
+</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> </title>
+   <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="function.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+  body {
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+  }
+  #welcome {
+    height: 100vh;
+    background-color: #ffc50a;
+  }
+  #item-desc {
+    height: 115vh;
+    background-color: #cc3333;
+
+  }
+  #item-story {
+    height: 180vh;
+    background-color: #932525;
+  }
+  #item-story-content {
+    display: flex;
+    justify-content: space-around;
+
+  }
+  #item-experience {
+    height: 115vh;
+    background-color: #262825;
+    margin: 0;
+    padding: 0;
+  }
+  #house-image {
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+  #welcome-title {
+    margin-left: 40%;
+  }
+  #main-image {
+    width: 25%;
+    position: absolute;
+    top: 20%;
+    left: 38%;
+
+  }
+  #story-text-box {
+    background-color: #a85656;
+    width: 30%;
+    margin-left: 6%;
+  }
+  .text-box {
+    padding: 2%;
+    background-color:#a82222;
+    font-family: standard;
+    font-size: 3vh;
+    width: 35%;
+    border-radius: 30px;
+    margin-top: 2%;
+
+  }
+  h2 {
+    font-family: cute;
+    font-size: 4.5vh;
+  }
+  ul {
+    font-family: standard;
+    font-size: 3vh;
+  }
+  p {
+    font-family: standard;
+  }
+  /* carousel*/
+
+
+  .pic-ctn {
+    width: 100vw;
+    height: 200px;
+  }
+
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+
+  .pic-ctn {
+    position: relative;
+    width: 50vw;
+    height: 4vh;
+    margin-top: 5vh;
+  }
+
+  .pic-ctn > img {
+    width: 51vw;
+    position: absolute;
+    top: 0;
+    left: calc(61% - 100px);
+    opacity: 0;
+    animation: display 10s infinite;
+  }
+
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  img:nth-child(5) {
+    animation-delay: 8s;
+  }
+  img:nth-child(6) {
+    animation-delay: 10s;
+  }
+  img:nth-child(7) {
+    animation-delay: 12s;
+  }
+  img:nth-child(8) {
+    animation-delay: 14s;
+  }
+  img:nth-child(9) {
+    animation-delay: 16s;
+  }
+  img:nth-child(10) {
+    animation-delay: 18s;
+  }
+  img:nth-child(11) {
+    animation-delay: 20s;
+  }
+  img:nth-child(12) {
+    animation-delay: 22s;
+  }
+  img:nth-child(13) {
+    animation-delay: 24s;
+  }
+  img:nth-child(14) {
+    animation-delay: 26s;
+  }
+  img:nth-child(15) {
+    animation-delay: 28s;
+  }
+  img:nth-child(16) {
+    animation-delay: 30s;
+  }
+
+  /* POLAROID */
+  .picture-container
+  {
+      margin-left: 5%;
+      width: 40%;
+  }
+  .picture-container #polaroid-1
+  {
+      left: 5%;
+      top: 3%;
+      transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+      -webkit-transform: rotate(-15deg);
+
+  }
+  .picture-container #polaroid-2
+  {
+      left: 65%;
+      top: 40%;
+      transform: rotate(15deg);
+      -ms-transform: rotate(15deg);
+      -webkit-transform: rotate(15deg);
+  }
+  .picture-container #polaroid-3
+  {
+      left: 2%;
+      top: 95%;
+      transform: rotate(8deg);
+      -ms-transform: rotate(8deg);
+      -webkit-transform: rotate(8deg);
+  }
+  .picture-container #polaroid-4
+  {
+      left: 65%;
+      top: 120%;
+      transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+      -webkit-transform: rotate(-10deg);
+  }
+  </style>
+
+</head>
+<body>
+  <div id="house">
+    <img src="images/house.png" alt = "house-image" id="house-image">
+    <a href="possessions.html"><h1 id="go-back"> Go back </h1></a>
+  </div>
+<section id="welcome">
+  <img id="main-image" src="images/camera_drawing.png">
+  <h1 id="welcome-title"> Life on Film </h1>
+  <a href="#item-desc"><img src="images/arrow_down.png" id="down-arrow-image"> </a>
+</section>
+<section id="item-desc">
+  <h1 class="section-title"> The Item </h1>
+  <div style="display: flex; justify-content: space-evenly;">
+    <img src="images/kodak_camera.png" style="width:auto; height: 5%;">
+    <div class="text-box" style="background-color:#ffc50a;">
+      <h2> Item Description: </h2> Kodak Disposable Camera <br>
+      <h2> Location & Means of Recieval: </h2> Bought at a local corner store <br>
+      <h2> Time Period of Impact: </h2> June 2021-Present <br>
+      <h2> Special Details: </h2>
+        <ul>
+          <li>Holds 27 shots of film</li>
+          <li>Portable</li>
+          <li>Comes in different models</li>
+        </ul>
+
+    </div>
+  </div>
+</section>
+<section id="item-story">
+  <h1 class="section-title"> The Story </h1>
+  <div id="item-story-content">
+    <!-- CREATING POLAROID PHOTOS USING CSS
+    - tutorial: https://medium.com/@SavvStudio/tutorial-make-your-images-look-like-polaroid-pictures-with-html-and-css-7b1120732dd1 -->
+    <div class = "picture-container">
+      <div class="polaroid" id="polaroid-1" polaroid-caption=":))">
+        <img src="images/film_photos/film_me_square.jpg" style="width: 18vw;">
+      </div>
+      <div class="polaroid" id="polaroid-2" polaroid-caption="Photo I took @ Oculus Mall">
+        <img src="images/film_photos/oculus_square.jpg" style="width: 18vw;">
+      </div>
+      <div class="polaroid" id="polaroid-3" polaroid-caption="Photoshoot w/ a friend (1/2)">
+        <img src="images/film_photos/photoshoot_1.jpg" style="width: 18vw;">
+      </div>
+      <div class="polaroid" id="polaroid-4" polaroid-caption="Photoshoot w/ a friend (2/2)">
+        <img src="images/film_photos/photoshoot_2.jpg" style="width: 18vw;">
+      </div>
+    </div>
+    <div class="text-box" id="story-text-box" style="font-size: 2.6vh;">
+      <p>
+      Growing up, I've always been interested in photography. Whether it was taking
+      photos on my iPhone and editing them in apps, taking a course at the YMCA,
+      shooting photoshoots with friends, or other related things,
+      I have always been interested in using photography as a means of artistic expression.
+      It wasn't until I took notice to how taking film photos with a disposable camera
+      was becoming somewhat popular online when I became interested in how I can
+      change how I celebrate and document my own memories with friends and
+      of life in general.
+      <br><br>
+      What I loved about the idea of shooting on film is the nostalgic, wholesome,
+      almost "dreamy" feel that film photos have, making every shot taken feel already
+      like a faded memory from a decade ago that I'm already looking back.
+      Besides this, the nature of the disposable camera itself is what also helps feed into the
+      idea of "living in the moment", as taking a photo takes only a few seconds,
+      only for the photos to only be allowed to be seen once they are developed.
+      This subtle idea makes it easier to carry on with the memory you were in the
+      middle of making and continue to enjoy yourself in the presence of others
+      without any interruption.
+      <br><br>
+      In this way, I was interested in how I can use this means to preserve memories
+      with friends and document what happens around us in a more lively and
+      sentimental manner, one that is a huge change
+      from the rushed, chaotic, and superficial nature of how we document our
+      lives on social media. Because of this, I like to carry around
+      disposable cameras with me during special occasions for these reasons
+      as well as love getting involved with my friends who shoot on film.
+    </p>
+    </div>
+  </div>
+</section>
+<section id="item-experience">
+  <h1 class="section-title" style="color:gray;"> The Experience </h1>
+  <p style="text-align: center; color: white;font-size: 1.5vw;margin-top: 1%;margin-bottom: 2%;">
+    Below are just some of the photos I've taken on film before! <br>
+
+  </p>
+<div class="pic-ctn"> <!-- tutorial: https://codepen.io/tianyili/pen/qBEdeoy -->
+    <img src="images/film_photos/film_1.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_2.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_3.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_4.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_5.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_6.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_7.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_8.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_9.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_10.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_11.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_12.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_13.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_14.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_15.jpg" alt="" class="pic">
+    <img src="images/film_photos/film_16.jpg" alt="" class="pic">
+  </div>
+</section>
+</section>
+<script>
+</script>
+</body>
+</html>

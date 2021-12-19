@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> </title>
+  <script src="function.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+  body {
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+  }
+  h2 {
+    font-family: cute;
+    font-size: 4.5vh;
+  }
+  p {
+    font-family: standard;
+    font-size: 3vh;
+    text-align: left;
+  }
+  #welcome {
+    height: 100vh;
+    background-color: #0477BF;
+  }
+  #item-desc {
+    height: 130vh;
+    background-color: #FF6532;
+
+  }
+  #item-story {
+    height: 130vh;
+    background-color: #AB3734;
+  }
+  #story-text-box {
+    width: 70%;
+    margin-left: 15%;
+
+  }
+  #item-experience {
+    height: 100vh;
+    background-color: #5c3d1c;
+  }
+  #house-image {
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+  #welcome-title {
+    margin-left: 28%;
+  }
+  #main-image {
+    width: 25%;
+    position: absolute;
+    top: 19%;
+    left: 38.5%;
+  }
+  .text-box {
+
+    width: 35%;
+    margin-top: 2%;
+  }
+  </style>
+
+</head>
+<body>
+  <div id="house">
+    <img src="images/house.png" alt = "house-image" id="house-image">
+    <a href="possessions.html"><h1 id="go-back"> Go back </h1></a>
+  </div>
+<section id="welcome">
+  <img id="main-image" src="images/cake_drawing.png">
+  <h1 id="welcome-title"> Cake for My Nineteenth </h1>
+  <a href="#item-desc"><img src="images/arrow_down.png" id="down-arrow-image"> </a>
+</section>
+<section id="item-desc">
+  <h1 class="section-title"> The Item </h1>
+  <div style="display: flex; justify-content: space-evenly; margin-top: 5%;">
+    <img src="images/bday_cake.jpg" style="width: auto; height: 70vh; margin-left: 1%;margin-top: 1%;">
+    <div class="text-box" style="background-color:#b82f25;margin-left: 1%;">
+      <h2> Item Description: </h2> A chocolate cake with M & M's that spell out
+      "Don't Be Shy" <br>
+      <h2> Location & Means of Recival: </h2> My dorm <br>
+      <h2> Special Details: </h2> Given by my friends as a surprise on my
+      19th birthday<br>
+      <h2> Time Period of Impact: </h2> March 1st, 2020 <br>
+    </div>
+  </div>
+</section>
+<section id="item-story">
+  <h1 class="section-title"> The Story </h1>
+  <div class="text-box" id="story-text-box" style="">
+    <p>
+      For my 19th birthday, I knew I had wanted to celebrate with my college friends.
+      Growing up, most of my birthdays were hosted and spent with family. It wasn't until late
+      Highschool and during college where I was able to take initiative and
+      celebrate with my friends for a day.
+      <br><br>
+      One of my earliest memories I can think of where I got to plan out what to
+      do was Junior Year of highschool where me and my friends did an Escape Room
+      and went to a fancy Italian restaurant after. It was memories like these
+      that will always make looking back at old times feeling bittersweet.
+      <br><br>
+      So because of how uncommon it was for me to celebrate my birthday with friends
+      growing up, it was a really sweet moment when on my 19th birthday my friends
+      bought me cake with a funny phrase on it spelled out in M & M's. In addition to this, they had also
+      gave me a shirt with really funny photos of me printed out on it
+      arranged into the shape of a heart. What can I say - I have very entertaining friends LOL
+      <br><br>
+      But, beyond the goofy exterior of these two gifts,
+      they both resonated with me deeply as a gesture of love and care from my college
+      friends on the day celebrating a further turning point into my adulthood,
+      something I'll remember for a while.
+      <br><br>
+      It's actions and thoughts like this
+      I recieve from them and other friends that constantly remind me of
+      the positive support system I have during college.
+      <br>
+  </p>
+  </div>
+</section>
+<section id="item-experience">
+  <h1 class="section-title"> The Experience </h1>
+  <p style="text-align: center;"> Click on the slice to eat some cake! (Hint: Put your sound up)</p>
+  <img src="images/cake_slice.png" style="width: 35%;margin-left: 35%;" onclick="eatCake()">
+  <audio id="audio" src="content/minecraft_eat_sound.mp3"></audio>
+</section>
+<script>
+function eatCake() {
+        var audio = document.getElementById("audio");
+        audio.play();
+}
+</script>
+</body>
+</html>

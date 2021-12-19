@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> </title>
+  <script src="function.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+  body {
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+  }
+  h2 {
+    font-family: cute;
+    font-size: 4.5vh;
+  }
+  h1 {
+    font-family: cute;
+  }
+  #welcome {
+    height: 100vh;
+    background-color:#bfd9db;
+  }
+  #item-desc {
+    height: 120vh;
+    background-color: #9ad1d4;
+
+  }
+  #item-story {
+    height: 100vh;
+    background-color: #80ced7;
+  }
+  #item-experience {
+    height: 100vh;
+    background-color: #007ea7;
+  }
+  #house-image {
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+  #welcome-title {
+    margin-left: 21%;
+  }
+  #mydiv {
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+
+  #mydivheader {
+  cursor: move;
+  z-index: 10;
+}
+#main-image {
+  width: 25%;
+  position: absolute;
+  top: 25%;
+  left: 38.5%;
+}
+#story-text-box {
+  width: 80%;
+  margin-left: 8%;
+}
+p {
+  font-family: standard;
+}
+  </style>
+</head>
+<body>
+  <div id="house">
+    <img src="images/house.png" alt = "house-image" id="house-image">
+    <a href="possessions.html"><h1 id="go-back"> Go back </h1></a>
+  </div>
+<section id="welcome">
+  <img id="main-image" src="images/mouse_drawing.png">
+  <h1 id="welcome-title" style="margin-top: 1%;"> A Shitty Amazon Basics Mouse </h1>
+  <a href="#item-desc"><img src="images/arrow_down.png" id="down-arrow-image"> </a>
+</section>
+<section id="item-desc">
+  <h1 class="section-title"> The Item </h1>
+  <div style="display: flex; justify-content: space-evenly;margin-top: 2%;">
+    <img src="images/amazon_mouse.png" style="width: 30%%;">
+    <div class="text-box" style="background-color: #71b9bd;width: 40%; height: 40%;">
+      <h2> Item Description: </h2> An Amazon Basics Mouse <br>
+      <h2> Location & Means of Recieval: </h2> A friend from college gave it to me cuz it was his spare <br>
+      <h2> Time Period of Impact: </h2> September 2019-Present <br>
+      <h2> Special Details: </h2>
+        <ul>
+          <li>Has been through a lot of late night study nights and too many League of Legends games</li>
+          <li>Very annoying cord</li>
+          <li>Eh quality</li>
+        </ul>
+
+    </div>
+  </div>
+</section>
+<section id="item-story">
+  <h1 class="section-title"> The Story </h1>
+  <div id="champs">
+  </div>
+  <div class="text-box" id="story-text-box" style="">
+    <p>
+      What seems like a normal mouse my friend during Freshmen year had given me
+      turned into what would eventually allow me to fuel a later gaming addiction.
+      Freshmen year I had gotten into League of Legends the same time as many of my
+      other friends did and this mouse served as my ride or die through those fun times.
+      Playing with our other friends who have been playing for years, we would frequently
+      play in the common areas and conference rooms of our dorm and even had 5v5's in-person
+      as our way to spend our Thursday nights.
+      <br> <br>
+      And although whenever I talk to one of these college friend about these experiences
+      and how much we wished we got more sleep at the time, the special way we all bonded through
+      the liking of the same video game was unique in its own way. Many of the people who
+      tried playing Freshmen year have stopped playing or lost interest, as I have as well,
+      but some of our core or first memories with each other had been created becaue of
+      our mutual interets.
+      <br> <br>
+      However, I must also note League is a terrible, awful game that has plagued society as
+      we know it. So in conclusion if you want to play a video game with your friends,
+      first uninstall League and THEN consider your options.
+    </p>
+  </div>
+</div>
+</section>
+<section id="item-experience">
+  <h1 class="section-title"> The Experience </h1>
+  <p style="font-size: 3vh;text-align: center;"> League is trash. Drag the application icon to the trash can to put it
+  where it belongs. </p>
+  <div style="display: flex; margin-top:10%;">
+
+    <!-- Draggable DIV -->
+    <div id="mydiv">
+      <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+      <div id="mydivheader"><img src="images/league_icon.png" style="width: 50%;margin-left: 150%;"></div>
+    </div>
+
+  <img src="images/trash_can.png" style="width: 20%; margin-left:60%;">
+  </div>
+</section>
+<script>
+// Make the DIV element draggable:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+</body>
+</html>

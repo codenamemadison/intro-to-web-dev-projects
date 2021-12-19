@@ -1,11 +1,22 @@
-body {
+html {
   scroll-behavior: smooth;
 }
+body {
+
+}
+
 @font-face {
   font-family: standard;
   src: url(fonts/PublicSans-Regular.otf);
 }
+@font-face {
+  font-family: cute;
+  src: url(fonts/mungil-regular-webfont.woff);
+}
+h1 {
+  font-family: standard;
 
+}
 .typing-container {
   display: flex;
   justify-content: center;
@@ -65,4 +76,133 @@ a {
 .text-container {
   font-family: standard;
 
+}
+
+#house {
+  position: absolute;
+  font-family: standard;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+}
+#house a{
+  text-decoration: none;
+  color: black;
+  width: 60%;
+}
+#house a:hover {
+  text-decoration: underline;
+}
+#house a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+
+#house-image {
+  width: 10%;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+#go-back {
+  font-size: 3vh;
+  margin-left: 1%;
+}
+
+#welcome {
+  border: none;
+}
+#item-desc {
+  border: none;
+}
+#item-story {
+  border: none;
+}
+#item-experience {
+  border: none;
+}
+
+#welcome-title {
+  font-family: cute;
+  font-size: 10vh;
+  position: absolute;
+  top: 60%;
+  text-align: center;
+}
+
+#down-arrow-image {
+  width: 5vw;
+  position: absolute;
+  margin-left: 48%;
+  top: 85%;
+
+}
+.section-title {
+  font-family: cute;
+  font-size: 10vh;
+  margin: 0%;
+  text-align: center;
+  padding-top: 4%;
+}
+
+.text-box {
+  padding: 2%;
+  font-family: standard;
+  font-size: 3vh;
+  border-radius: 30px;
+}
+
+/* POLAROID */
+.picture-container
+{
+    position: relative;
+
+    height: 500px;
+}
+.picture-container .polaroid
+{
+    position: absolute;
+    border: 1px solid darkgrey;
+    background-color: white;
+    padding: 12px 12px 50px 12px;
+    box-shadow: 5px 8px 8px #2e2e2e;
+}
+.picture-container .polaroid:after
+{
+    content: attr(polaroid-caption);
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 100%;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+.picture-container #polaroid-1
+{
+    transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+
+}
+.picture-container #polaroid-2
+{
+    transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+}
+.picture-container #polaroid-3
+{
+    transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+}
+.picture-container #polaroid-4
+{
+    transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
 }

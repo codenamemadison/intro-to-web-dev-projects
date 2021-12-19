@@ -3,10 +3,10 @@
 <head>
   <title> Final Project </title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <script src="function.js"></script>
-        <script src="jquery-2.1.4.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="three.min.js"> </script>
+  <script src="function.js"></script>
+  <script src="jquery-2.1.4.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="three.min.js"> </script>
   <script>
   </script>
   <style>
@@ -24,7 +24,7 @@
   }
 
   #about {
-    height: 160vh;
+    height: 220vh;
     background-color: #ff9920;
   }
 
@@ -79,52 +79,73 @@
   transform: translateY(-2px);
   }
 
+#down-arrow-image {
+    margin-top: 50%;
+    width: 10vw;
+    margin-left: 46%;
+}
+
   #about-text-container {
-    margin-top: -10%;
-    width: 90%;
-    margin-left: 10%;
-    padding: 5%;
+    padding-top: 3%;
+    padding-right: 0%;
+    text-align: center;
+    margin-top: 20%;
+    width: 80%;
+    margin-left: 15%;
+    color: #fff3de;
+    font-size: 1.3vw;
+
   }
 
   #about-1 {
-    width: 45%;
-    margin-left: 18%;
+    width: 40%;
+    margin-left: 5%;
+    position: absolute;
   }
   #about-2 {
-    width: 35%;
-    margin-top: 5%;
-    margin-left: -5%;
+    width: 40%;
+    margin-top: 15%;
+    margin-left: -8%;
+    position: absolute;
   }
   #about-3 {
-    width: 30%;
-    margin-top: 5%;
-    margin-left: 50%;
+    width: 45%;
+    margin-top: 30%;
+    margin-left: 0%;
+    position: absolute;
   }
   #about-4 {
     width: 35%;
-    margin-top: 5%;
-    margin-left: 40%;
+    margin-top: 40%;
+    margin-left: 30%;
+    position: absolute;
+  }
+  #youth-image {
+    width: 30%;
+    margin-top: 11%;
+    margin-left: 7%;
+    position: absolute;
   }
   #tech-1 {
     font-size: 3vw;
     color: white;
     position: absolute;
     top: 10%;
-    left: 18%;
+    left: 30%;
   }
   #tech-2 {
     font-size: 3vw;
     color: white;
     position: absolute;
-    top: 20%;
-    right: 10%;
+    top: 25%;
+    right: 11%;
   }
   #tech-3 {
     font-size: 3vw;
     color: white;
     position: absolute;
     top: 25%;
-    left: 25%;
+    left: 10%;
   }
   #tech-4 {
     font-size: 3vw;
@@ -148,7 +169,88 @@
     left: 50%;
   }
   </style>
+<script>
 
+    var i = 0;
+    var txt1 = 'WELCOME'; /* The text */
+    var speed1 = 350; /* The speed/duration of the effect in milliseconds */
+    var pause1 = new Boolean(true);
+    function typeWriter1() {
+      if (i < txt1.length) {
+        document.getElementById("welcome_title").innerHTML += txt1.charAt(i);
+        i++;
+        setTimeout(typeWriter1, speed1);
+      } else {
+        if (pause1) {
+          setTimeout(typeWriter1, 1000);
+          pause1 = false;
+        } else { // after pause
+          i = 0
+          document.getElementById("welcome_title").innerHTML = txt1.charAt(i);
+          i++;
+          setTimeout(typeWriter1, speed1);
+          pause1 = true;
+        }
+      }
+    }
+
+    var j = 0;
+    var txt2 = 'ABOUT'; /* The text */
+    var speed2 = 350; /* The speed/duration of the effect in milliseconds */
+    var pause2 = new Boolean(true);
+    function typeWriter2() {
+      if (j < txt2.length) {
+        document.getElementById("about_title").innerHTML += txt2.charAt(j);
+        j++;
+        setTimeout(typeWriter2, speed2);
+      } else {
+        if (pause2) {
+          setTimeout(typeWriter2, 1000);
+          pause2 = false;
+        } else { // after pause
+          j = 0
+          document.getElementById("about_title").innerHTML = txt2.charAt(j);
+          j++;
+          setTimeout(typeWriter2, speed2);
+          pause2 = true;
+        }
+      }
+    }
+    function init() {
+      typeWriter1();
+      typeWriter2();
+
+    }
+
+    var k = 0;
+    var txt3 = 'TECHNOLOGY USED'; /* The text */
+    var speed3 = 350; /* The speed/duration of the effect in milliseconds */
+    var pause3 = new Boolean(true);
+    function typeWriter3() {
+      if (k < txt3.length) {
+        document.getElementById("tech_title").innerHTML += txt3.charAt(k);
+        k++;
+        setTimeout(typeWriter3, speed3);
+      } else {
+        if (pause3) {
+          setTimeout(typeWriter3, 1000);
+          pause3 = false;
+        } else { // after pause
+          k = 0
+          document.getElementById("tech_title").innerHTML = txt3.charAt(k);
+          k++;
+          setTimeout(typeWriter3, speed3);
+          pause3 = true;
+        }
+      }
+    }
+    function init() {
+      typeWriter1();
+      typeWriter2();
+      typeWriter3();
+    }
+
+</script>
 
 </head>
 <body onload="init()">
@@ -163,11 +265,13 @@
     <h1 id="welcome_title" ></h1>
     <span class="input-cursor"></span>
   </div>
+  <a href="enter.html">
   <button class="pushable"> <!-- tutorial used: https://www.joshwcomeau.com/animation/3d-button/ -->
     <span class="front">
       Enter
     </span>
   </button>
+  </a>
 </section>
 <section id="about">
   <div class="topnav">
@@ -175,10 +279,11 @@
     <a class="active" href="#about">About</a>
     <a href="#tech">Technology Used</a>
   </div>
-  <div class="typing-container" style="margin-top: 17%;">
+  <div class="typing-container" style="margin-top: 20%;">
     <h1 id="about_title" ></h1>
     <span class="input-cursor"></span>
   </div>
+  <a href="#about-text-container"><img src="images/arrow_down.png" id="down-arrow-image"> </a>
   <div class="text-container" id="about-text-container">
     <p id="about-1">
       As my final project for my Intro to Web Development class and during a
@@ -198,7 +303,8 @@
       learn more about me in this way.
     </p>
     <p id="about-3">
-      The bigger concept was to explore the ways web dev and web design as a
+      The bigger concept was to explore the ways in which web dev and web design
+      can be used as a
       means for others to be able to easily be able to connect and understand
       intimate moments and memories of our own lives.
     </p>
@@ -206,6 +312,7 @@
       In this way, I hope viewers can experience my own experiences as their own
       as close as possible.
     </p>
+    <img src="images/kids_drawing.png" id="youth-image">
   </div>
 </section>
 <section id="tech">

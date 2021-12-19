@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> </title>
+  <script src="function.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+  body {
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+  }
+  h1 {
+    padding: 1%;
+  }
+  #welcome {
+    height: 100vh;
+    background-color: #F46036;
+  }
+  #item-desc {
+    height: 100vh;
+    background-color: #f4845f;
+
+  }
+  #item-story {
+    height: 150vh;
+    background-color: #f79d65;
+
+  }
+  #story-text-box {
+      width: 60%;
+      margin-top: 2%;
+      margin-left: -25%;
+      font-size: 2.5vh;
+  }
+  #item-experience {
+    height: 100vh;
+    background-color: #f7b267;
+  }
+  #house-image {
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+  #down-arrow-image {
+
+  }
+  #welcome-title {
+
+    width: 100%;
+  }
+  #main-image {
+    width: 28%;
+    position: absolute;
+    top: 16%;
+    left: 36%;
+
+  }
+  .text-box {
+    background-color:#f56738;
+    width: 35%;
+    margin-top: 2%;
+  }
+  h2 {
+    font-family: cute;
+    font-size: 4.5vh;
+  }
+  .pic {
+    position: absolute;
+  }
+  #pic1 {
+    width: 30%;
+    top: 10%;
+    left: 20%;
+
+  }
+  #pic2 {
+    width: 30%;
+  }
+  #pic3 {
+    width: 30%;
+  }
+  #pic4 {
+    width: 30%;
+  }
+  #pic5 {
+    width: 30%;
+  }
+  #pic6 {
+    width: 30%;
+  }
+  .photos {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  /* CAROUSEL */
+  * {
+        box-sizing: border-box;
+}
+.panel-photo {
+  width: 100%;
+  margin-top: -5%;
+
+
+}
+.panel-boi {
+  width: 50%;
+}
+#panel_a {
+  padding: 0%;
+}
+
+#panel_b {
+
+}
+#panel_c {
+
+}
+#panel_d {
+
+}
+#panel_e {
+
+}
+#panel_f {
+
+}
+#container {
+  margin-left: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#carousel, #navigation {
+    flex: initial;
+    display: block;
+}
+
+#carousel {
+    overflow: hidden;
+    width: 40%;
+    height: 400px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.p-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+#button_a:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+#button_b:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+#button_c:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+}
+
+#button_d:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+}
+#button_e:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+}
+#button_f:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(-500%);
+    transform: translateY(-500%);
+}
+
+[class^="panel_"] {
+    overflow: auto;
+    position: relative;
+    width: inherit;
+    height: inherit;
+    padding: 48px;
+}
+
+#navigation {
+    margin-left: 24px;
+}
+
+[class^="label_"] {
+    display: block;
+    cursor: pointer;
+    margin: 8px 0;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 4px;
+    color: #aaa;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+[class^="label_"]:hover {
+    color: #444;
+    background-color: #ffeed9;
+}
+
+#button_a:checked ~ #navigation .label_a,
+#button_b:checked ~ #navigation .label_b,
+#button_c:checked ~ #navigation .label_c,
+#button_d:checked ~ #navigation .label_d,
+#button_e:checked ~ #navigation .label_e,
+#button_f:checked ~ #navigation .label_f  {
+     cursor: default;
+     color: #fff;
+     background-color: #222;
+}
+
+  </style>
+</head>
+<body>
+  <div id="house">
+    <img src="images/house.png" alt = "house-image" id="house-image">
+    <a href="possessions.html"><h1 id="go-back"> Go back </h1></a>
+  </div>
+<section id="welcome">
+  <img id="main-image" src="images/lobster_drawing.png">
+  <h1 id="welcome-title"> Livin' Like Larry </h1>
+  <a href="#item-desc"><img src="images/arrow_down.png" id="down-arrow-image"> </a>
+</section>
+<section id="item-desc">
+  <h1 class="section-title"> The Item </h1>
+  <div style="display: flex; justify-content: space-evenly;">
+    <img src="images/lobster_transparent.png">
+    <div class="text-box">
+      <h2> Item Description: </h2> A giant stuffed lobster <br>
+      <h2> Location & Means of Recieval: </h2> Purchased at a souvenir shop in Salisbury, Massachusetts <br>
+      <h2> Time Period of Impact:</h2> July 2021 </br>
+      <h2> Special Details: </h2> Very cute <br>
+    </div>
+  </div>
+</section>
+<section id="item-story">
+  <h1 class="section-title"> The Story </h1>
+  <div class="photos">
+    <div id="container">
+
+
+      <input hidden type="radio" name="carousel-control" id="button_a" checked/>
+      <input hidden type="radio" name="carousel-control" id="button_b"/>
+      <input hidden type="radio" name="carousel-control" id="button_c"/>
+      <input hidden type="radio" name="carousel-control" id="button_d"/>
+      <input hidden type="radio" name="carousel-control" id="button_e"/>
+      <input hidden type="radio" name="carousel-control" id="button_f"/>
+
+
+
+      <div id="carousel">
+          <div class="p-wrapper">
+
+              <section class="panel_a" class="panel-boi">
+                  <img class="panel-photo" src="images/mass_trip/mass_trip_1.png">
+              </section>
+
+              <section class="panel_b"class="panel-boi">
+                  <img class="panel-photo" src="images/mass_trip/mass_trip_2.png">
+              </section>
+
+              <section class="panel_c"class="panel-boi">
+                  <img class="panel-photo" src="images/mass_trip/mass_trip_3.png">
+              </section>
+
+              <section class="panel_d"class="panel-boi">
+                  <img class="panel-photo" src="images/mass_trip/mass_trip_4.png">
+              </section>
+              <section class="panel_e"class="panel-boi">
+                  <img class="panel-photo" src="images/mass_trip/mass_trip_5.png">
+              </section>
+              <section class="panel_f"class="panel-boi">
+                  <img class="panel-photo" src="images/mass_trip/mass_trip_6.png">
+              </section>
+
+          </div> <!-- // .p-wrapper -->
+      </div> <!-- // #carousel -->
+
+
+      <div id="navigation">
+          <label for="button_a" class="label_a"> <span></span> </label>
+          <label for="button_b" class="label_b"> <span></span> </label>
+          <label for="button_c" class="label_c"> <span></span> </label>
+          <label for="button_d" class="label_d"> <span></span> </label>
+          <label for="button_e" class="label_e"> <span></span> </label>
+          <label for="button_f" class="label_f"> <span></span> </label>
+      </div> <!-- // #navigation -->
+
+
+  </div> <!-- // #container -->
+
+
+    <div class="text-box" id="story-text-box" style="background-color: transparent;">
+    <p>
+      Yes, I did buy a giant stuffed lobster. Although an impulsive purchase, it's
+      one I do not regret. I had gotten it on a trip to Massachusetts that I went
+      on this past summer with some highschool friends to visit our online friends
+      in their hometowns for the first time.
+      <br> <br>
+      Growing up I had always been warned by my parents to "stay away from strangers"
+      online so I never had the experience of befriending people online. Long story
+      short, some of my high school friends had friends they grew up with and they all
+      had online friends they met through video games and, as you might have guessed,
+      they eventually became my
+      online friends too.
+      <br> <br>
+      And so, as my first online friends I've ever made,
+      although we have all met up in person before multiple times, it was almost
+      like a turning point in breaking that "online" barrier of our friendships to
+      be able to visit our online friends in their hometowns, meet their family,
+      hang out together in places familiar to them but so foreign to us, and
+      to experience the way they have grown up this whole time. It's a trippy
+      experience to say the least.
+    <br><br>
+      But of course you're wondering how a lobster has anything to do with this right?
+      Well, not too far from one of our online friend's house was a boardwalk near the beach
+      that we ended up visiting multiple times. On the last day before me and my
+      highschool friends had to leave, we visited the souvenir shop on this boardwalk
+      (hence the photos of the ceramic ducks), which is where I laid my eyes on
+      an extremely obnoxiously giant stuffed lobster. And, obviously as one does,
+      I bought it immediately.
+      <br> <br>
+      What has made use as a good comfy pillow has also served as a wholesome
+      reminder of my online friends and my highschool friends and the first trip
+      we went on together :)
+<br> <br>
+      <b> Click on the dots to scroll through photos from the trip! </b>
+      </thead>
+    </p>
+    </div>
+  </div>
+</section>
+<section id="item-experience">
+  <h1 class="section-title"> The Experience</h1>
+  <p style="font-family: standard;font-size: 2.5vh;text-align: center;"> This video reminds me of my stuffed lobster. Enjoy.</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/hH4-qf4VQMs"
+  title="YouTube video player" frameborder="0" style="margin-left:30%;"
+  allow="accelerometer; autoplay;
+  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<img src="images/dancing_lobster.gif" style="width: 10%;margin-left: 1%;padding-top: 5%;">
+</section>
+</body>
+</html>
