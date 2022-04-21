@@ -99,16 +99,18 @@ a {
   color: black;
 }
 
-
+#enter-text {
+    margin-left: 2%;
+}
 #house-image {
-  width: 10%;
-  margin-left: 1%;
+  width: 6%;
+  margin-left: 1.5%;
   margin-top: 1%;
 }
 
 #go-back {
   font-size: 3vh;
-  margin-left: 1%;
+  margin-left: 2%;
 }
 
 #welcome {
