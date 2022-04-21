@@ -1,5 +1,5 @@
-# codenamemadison.github.io
-This is a website I made for my "DM-UY 2193 - Intro to Web Dev" class
+# DM-UY 2193 - INTRO TO WEB DEV - PROJECTS
+This is a website I made for my "Intro to Web Dev" class
 
 [Click here to see a website made for students to use to help study with!](https://codenamemadison.github.io/intro-to-web-dev-projects/midterm/index.html)
 <img width="1440" alt="Screen Shot 2022-04-21 at 5 20 52 AM" src="https://user-images.githubusercontent.com/42008799/164423404-d31313f0-852b-49fb-8e00-1fd44d6d2eff.png">
